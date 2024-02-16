@@ -4,3 +4,9 @@
 {"level":"info","message":"Detalles del ítem con ID MLA743626587 obtenidos correctamente."}
 {"level":"info","message":"Solicitud para obtener detalles del ítem con ID: MLA11"}
 {"level":"error","message":"Error al procesar la solicitud: Request failed with status code 404"}
+{"level":"info","message":"Server listening on port 3000"}
+{"level":"info","message":"Server listening on port 3000"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: , limit: 10, offset: 0"}
+{"level":"info","message":"Server listening on port 3000"}
+{"level":"info","message":"Received x-auth-token: undefined"}
+{"level":"warn","message":"Unauthorized access attempt"}
