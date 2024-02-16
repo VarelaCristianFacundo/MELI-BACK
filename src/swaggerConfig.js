@@ -8,6 +8,15 @@ const options = {
       version: '1.0.0',
       description: 'Documentación de la API de Mercado Libre',
     },
+    components: {
+      securitySchemes: {
+        xAuth: {
+          type: 'apiKey',
+          in: 'header',
+          name: 'x-auth-token',
+        },
+      },
+    },
   },
   apis: ['./routes/*.js'],
 };
