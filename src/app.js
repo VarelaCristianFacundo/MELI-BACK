@@ -1,9 +1,14 @@
 const express = require('express');
+const dotenv = require("dotenv").config();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
+console.log('Loaded ENV Variables:', process.env);
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+console.log(process.env.PORT);
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
