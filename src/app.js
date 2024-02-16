@@ -19,7 +19,6 @@ app.use('/search', require('./routes/search'));
 app.use('/items', require('./routes/items'));
 
 app.listen(PORT, () => {
-    logger.info(`Server listening on port ${PORT} in ${NODE_ENV} environment`);
-    console.log(`Server listening on port ${PORT} in ${NODE_ENV} environment`);
-
+    logger.info(`Server listening on port ${PORT}`);
+    console.log(`Server listening on port ${PORT}`);
 });
