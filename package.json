@@ -20,7 +20,8 @@
     "morgan": "^1.10.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-dist": "^5.11.7",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.22.0",
