@@ -29,3 +29,18 @@
 {"level":"info","message":"Server listening on port 3000 in production environment"}
 {"level":"info","message":"Server listening on port 3000 in development environment"}
 {"level":"info","message":"Server listening on port 3000 in qa environment"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: , limit: 10, offset: 0"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Solicitud para obtener detalles del ítem con ID: MLB743626587"}
+{"level":"error","message":"Error al procesar la solicitud: Request failed with status code 404"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Solicitud para obtener detalles del ítem con ID: MLB155254"}
+{"level":"error","message":"Error al procesar la solicitud: Request failed with status code 404"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: , limit: 10, offset: 0"}
+{"level":"info","message":"Received x-auth-token: 55a4639f-55e8-4e14-a6cc-b79977b20a4e"}
+{"level":"info","message":"Search request received with x-auth-token: 55a4639f-55e8-4e14-a6cc-b79977b20a4e"}
