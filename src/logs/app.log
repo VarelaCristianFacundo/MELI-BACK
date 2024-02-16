@@ -11,3 +11,16 @@
 {"level":"info","message":"Received x-auth-token: undefined"}
 {"level":"warn","message":"Unauthorized access attempt"}
 {"level":"info","message":"Server listening on port 3000"}
+{"level":"info","message":"Server listening on port 3000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"warn","message":"Unauthorized access attempt"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: , limit: 10, offset: 0"}
+{"level":"info","message":"Server listening on port 3000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"warn","message":"Unauthorized access attempt"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: , limit: 10, offset: 0"}

@@ -2,9 +2,9 @@
   "name": "meli-back",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "cd src/ && node app.js",
     "test": "jest"
   },
   "jest": {

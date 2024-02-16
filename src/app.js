@@ -1,13 +1,13 @@
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('./swaggerConfig');
+const swaggerSpec = require('./config/swaggerConfig');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const dotenv = require("dotenv").config();
 const logger = require('./config/logger');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
