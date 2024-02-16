@@ -1,4 +1,5 @@
 const axios = require('axios');
+const logger = require('../config/logger');
 
 exports.search = async (req, res) => {
   try {
@@ -7,6 +8,8 @@ exports.search = async (req, res) => {
     const sort = req.query.sort || '';
     const limit = parseInt(req.query.limit) || 10;
     const offset = parseInt(req.query.offset) || 0;
+
+    logger.info(`Search request received with query: site: ${site}, sort: ${sort}, limit: ${limit}, offset: ${offset}`);
 
     const response = await axios.get(`https://api.mercadolibre.com/sites/${site}/search?q=${query}&sort=${sort}&limit=${limit}&offset=${offset}`);
 
@@ -34,6 +37,7 @@ exports.search = async (req, res) => {
     res.status(200).json(formattedResponse);
   } catch (error) {
     console.error(error);
+    logger.error(`Error in search controller: ${error.message}`);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
