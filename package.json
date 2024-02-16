@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start:dev": "node src/app.js",
+    "start:qa": "SET NODE_ENV=qa&& node src/app.js",
+    "start:prod": "SET NODE_ENV=production&& node src/app.js",
     "test": "jest"
   },
   "jest": {

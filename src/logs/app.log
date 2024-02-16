@@ -11,3 +11,8 @@
 {"level":"info","message":"Received x-auth-token: undefined"}
 {"level":"warn","message":"Unauthorized access attempt"}
 {"level":"info","message":"Server listening on port 3000"}
+{"level":"info","message":"Server listening on port 3000 in development environment"}
+{"level":"info","message":"Server listening on port 3000 in production environment"}
+{"level":"info","message":"Server listening on port 3000 in production environment"}
+{"level":"info","message":"Server listening on port 3000 in development environment"}
+{"level":"info","message":"Server listening on port 3000 in qa environment"}
