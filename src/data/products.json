@@ -1,0 +1,151 @@
+{
+  "paging": {
+    "total": 513,
+    "offset": 0,
+    "limit": 10
+  },
+  "categories": [
+    "Ropa y Accesorios",
+    "Hogar, Muebles y Jardín",
+    "Hockey",
+    "Libros, Revistas y Comics",
+    "Fitness y Musculación",
+    "Natación",
+    "Fútbol",
+    "Juegos y Juguetes",
+    "Ciclismo",
+    "Tenis, Padel y Squash ",
+    "Belleza y Cuidado Personal",
+    "Herramientas",
+    "Rugby",
+    "Arte, Librería y Mercería",
+    "Computación",
+    "Electrónica, Audio y Video",
+    "Música, Películas y Series",
+    "Voley",
+    "Salud y Equipamiento Médico",
+    "Accesorios para Vehículos",
+    "Artes Marciales y Boxeo",
+    "Electrodomésticos y Aires Ac.",
+    "Golf",
+    "Joyas y Relojes",
+    "Monopatines y Scooters",
+    "Suplementos y Shakers",
+    "Antigüedades y Colecciones",
+    "Bebés",
+    "Camping, Caza y Pesca",
+    "Celulares y Teléfonos",
+    "Montañismo y Trekking",
+    "Surf y Bodyboard"
+  ],
+  "items": [
+    {
+      "id": "MLA1392778159",
+      "title": "Buzo Oversize. No Bullbenny, No Undefined, Complot, Ay Not",
+      "price": {
+        "currency": "ARS",
+        "amount": 25000,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_745648-MLA72361654439_102023-I.jpg",
+      "condition": "new",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA1625144740",
+      "title": "Pala Plegable Coleman Acero Con Borde Dentado Rugged",
+      "price": {
+        "currency": "ARS",
+        "amount": 43500,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_946194-MLU74022910010_012024-I.jpg",
+      "condition": "new",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA1612842596",
+      "title": "Buzo Undefined H8ers Club",
+      "price": {
+        "currency": "ARS",
+        "amount": 60000,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_760696-MLA73894985267_012024-I.jpg",
+      "condition": "new",
+      "free_shipping": true
+    },
+    {
+      "id": "MLA1620171820",
+      "title": "Riñonera Porta Botella Celular Bike Trekking Running Gym Color 14075 Negro",
+      "price": {
+        "currency": "ARS",
+        "amount": 11050,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_816680-MLU70260573618_072023-I.jpg",
+      "condition": "new",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA1641138240",
+      "title": "Riñonera Alpine Skate Running Porta Botella Bici Camping Color Negro Diseño De La Tela Liso",
+      "price": {
+        "currency": "ARS",
+        "amount": 9900,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_737268-MLU73907134729_012024-I.jpg",
+      "condition": "new",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA1552732732",
+      "title": "Esmalte De Uñas Sally Hansen Complete Salon Manicure Color",
+      "price": {
+        "currency": "ARS",
+        "amount": 6600,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_619823-MLU74089579198_012024-I.jpg",
+      "condition": "new",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA1391602599",
+      "title": "Audífonos Intraurales Con Cable Para iPhone 12/13/14 Pro Color Blanco Color De La Luz Blanco",
+      "price": {
+        "currency": "ARS",
+        "amount": 4808.97,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_781998-MLU70423975813_072023-I.jpg",
+      "condition": "new",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA1391833745",
+      "title": "Riñonera Everlast Deportiva Expansible En Azul | Dexter",
+      "price": {
+        "currency": "ARS",
+        "amount": 7482,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_755295-MLU73611774742_122023-I.jpg",
+      "condition": "new",
+      "free_shipping": false
+    },
+    {
+      "id": "MLA1532583348",
+      "title": "Grifo Cocina Monocomando Cromado Acero Inoxidable Baño 0030",
+      "price": {
+        "currency": "ARS",
+        "amount": 33409.6,
+        "decimals": 2
+      },
+      "picture": "http://http2.mlstatic.com/D_781875-MLA72179759899_102023-I.jpg",
+      "condition": "new",
+      "free_shipping": true
+    }
+  ]
+}

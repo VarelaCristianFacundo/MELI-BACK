@@ -1,5 +1,8 @@
 const axios = require("axios");
 const logger = require("../config/logger");
+const path = require("path");
+const fs = require("fs");
+const { log } = require("console");
 
 exports.search = async (req, res) => {
   try {
@@ -26,6 +29,12 @@ exports.search = async (req, res) => {
       const response = await axios.get(
         `https://api.mercadolibre.com/sites/${site}/search?q=${query}&sort=${sort}&limit=${limit}&offset=${offset}`
       );
+      console.log(response.data);
+      console.log(
+        response.data.available_filters
+          .find((filter) => filter.id == "category")
+          ?.values.map((value) => value.name)
+      );
 
       const formattedResponse = {
         paging: {
@@ -33,7 +42,10 @@ exports.search = async (req, res) => {
           offset: response.data.paging.offset,
           limit: response.data.paging.limit,
         },
-        categories: response.data.categories,
+        categories:
+          response.data.available_filters
+            .find((filter) => filter.id == "category")
+            ?.values.map((value) => value.name) ?? [],
         items: response.data.results.map((item) => ({
           id: item.id,
           title: item.title,
@@ -51,7 +63,15 @@ exports.search = async (req, res) => {
       res.status(200).json(formattedResponse);
     } else if (authToken === process.env.SECOND_TOKEN) {
       // Lógica para el segundo token (datos mockeados o falsos)
-      res.status(200).json({ data: "datos_mockeados", valido: false });
+      const jsonFilePath = path.join(__dirname, "..", "data", "products.json");
+      try {
+        const jsonData = fs.readFileSync(jsonFilePath, "utf-8");
+        productsData = JSON.parse(jsonData);
+        console.log("Datos cargados en memoria:", productsData);
+        return res.status(200).json({ data: productsData, valido: false });
+      } catch (error) {
+        console.error("Error al cargar el archivo JSON:", error);
+      }
     } else {
       // Caso de token no válido
       res.status(401).json({ error: "Unauthorized" });
