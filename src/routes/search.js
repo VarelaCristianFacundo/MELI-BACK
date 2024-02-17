@@ -18,6 +18,18 @@ router.use(authenticationMiddleware);
  *         description: Ordenar por precio (price_asc o price_desc).
  *         schema:
  *           type: string
+ *       - in: query
+ *         name: limit
+ *         required: false
+ *         description: Límite máximo de productos.
+ *         schema:
+ *           type: number
+ *       - in: query
+ *         name: offset
+ *         required: false
+ *         description: Página.
+ *         schema:
+ *           type: number
  *     security:
  *       - xAuth: []
  *     responses:

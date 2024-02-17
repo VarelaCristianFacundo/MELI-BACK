@@ -44,3 +44,24 @@
 {"level":"info","message":"Search request received with query: site: MLA, sort: , limit: 10, offset: 0"}
 {"level":"info","message":"Received x-auth-token: 55a4639f-55e8-4e14-a6cc-b79977b20a4e"}
 {"level":"info","message":"Search request received with x-auth-token: 55a4639f-55e8-4e14-a6cc-b79977b20a4e"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: price_desc, limit: 51, offset: 0"}
+{"level":"error","message":"Error in search controller: Request failed with status code 400"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: price_desc, limit: 50, offset: 0"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: price_desc, limit: 50, offset: 1"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with query: site: MLA, sort: price_desc, limit: 50, offset: 2"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Received x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Search request received with x-auth-token: e962f81a-4d42-4eb3-86cd-a25e7237c8dc"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Server listening on port 8000"}
+{"level":"info","message":"Server listening on port 8000"}
