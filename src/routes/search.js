@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const searchController = require('../controllers/searchController');
-const authenticationMiddleware = require('../middleware/authentication');
+const searchController = require("../controllers/searchController");
+const authenticationMiddleware = require("../middleware/authentication");
 
 router.use(authenticationMiddleware);
 /**
@@ -11,6 +11,13 @@ router.use(authenticationMiddleware);
  *     summary: Obtiene la lista de items.
  *     tags: [Search]
  *     description: Retorna la lista de items disponibles.
+ *     parameters:
+ *       - in: query
+ *         name: sort
+ *         required: false
+ *         description: Ordenar por precio (price_asc o price_desc).
+ *         schema:
+ *           type: string
  *     security:
  *       - xAuth: []
  *     responses:
@@ -19,6 +26,6 @@ router.use(authenticationMiddleware);
  *       500:
  *         description: Error del servidor.
  */
-router.get('/', searchController.search);
+router.get("/", searchController.search);
 
 module.exports = router;
