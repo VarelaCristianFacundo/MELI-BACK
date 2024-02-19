@@ -1,80 +1,94 @@
 const axios = require('axios');
-const MockAdapter = require('axios-mock-adapter');
 const searchController = require('../controllers/searchController');
+const path = require('path'); 
+const fs = require('fs');
 
-// Creo instancia del mock de Axios
-const mock = new MockAdapter(axios);
+jest.mock('axios');
 
-// Inicio la suite de pruebas para el search controller
-describe('searchController', () => {  
-    describe('search', () => {
-        it('should return the correct search results', async () => {      
-            const query = 'apple watch';
-            const site = 'MLA';
-            const sort = 'price_asc';
-            const limit = 5;
-            const offset = 0;
-
-        // Creo una respuesta simulada de la API de Mercado Libre
-        const searchResponse = {
-            paging: {
-            total: 100,
-            offset: offset,
-            limit: limit,
-            },
-            categories: ['Electrónica, Audio y Video', 'Smartwatches'],
-            results: [
-            {
-                id: 'MLA123123',
-                title: 'Apple Watch Series 6',
-                currency_id: 'USD',
-                price: 399.99,
-                thumbnail: 'apple_watch.jpg',
-                condition: 'new',
-                shipping: { free_shipping: true },
-            },
-        ],
+describe('Search Controller', () => {
+  it('should return formatted response for valid token', async () => {
+    const req = {
+      header: jest.fn().mockReturnValue(process.env.AUTH_TOKEN),
+      query: { q: 'laptop' },
     };
 
-      // Configuro el mock para responder con la respuesta simulada
-      mock
-        .onGet(`https://api.mercadolibre.com/sites/${site}/search?q=${query}&sort=${sort}&limit=${limit}&offset=${offset}`)
-        .reply(200, searchResponse);
+    const res = {
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
 
-      // Creo un objeto de solicitud simulado y un objeto de respuesta simulado
-      const req = { query: { q: query, site: site, sort: sort, limit: limit, offset: offset } };
-      const res = {
-        status: jest.fn().mockReturnThis(),
-        json: jest.fn(),
-      };
-
-      // Llamo a la función de búsqueda del controller
-      await searchController.search(req, res);
-
-      // Verifico que la función haya respondido con el estado y JSON correctos
-      expect(res.status).toHaveBeenCalledWith(200);
-      expect(res.json).toHaveBeenCalledWith({
-        paging: {
-          total: 100,
-          offset: offset,
-          limit: limit,
-        },
-        categories: ['Electrónica, Audio y Video', 'Smartwatches'],
-        items: [
-          {
-            id: 'MLA123123',
-            title: 'Apple Watch Series 6',
-            price: {
-              currency: 'USD',
-              amount: 399.99,
-              decimals: 2,
-            },
-            picture: 'apple_watch.jpg',
-            condition: 'new',
-            free_shipping: true,
-          },
+    const axiosResponse = {
+      data: {
+        paging: { total: 10, offset: 0, limit: 10 },
+        available_filters: [{ id: 'category', values: [{ name: 'Electronics' }] }],
+        results: [
+          { id: '123', title: 'Laptop', price: 500, currency_id: 'USD', thumbnail: 'laptop.jpg', condition: 'new', shipping: { free_shipping: true } },
         ],
-      });
+      },
+    };
+
+    axios.get.mockResolvedValue(axiosResponse);
+
+    await searchController.search(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith({
+      paging: {
+        total: 10,
+        offset: 0,
+        limit: 10,
+      },
+      categories: ['Electronics'],
+      items: [
+        {
+          id: '123',
+          title: 'Laptop',
+          price: {
+            currency: 'USD',
+            amount: 500,
+            decimals: 2,
+          },
+          picture: 'laptop.jpg',
+          condition: 'new',
+          free_shipping: true,
+        },
+      ],
     });
+  });
+
+  
+  it('should handle invalid tokens', async () => {
+    const req = {
+      header: jest.fn().mockReturnValue('invalid_token'),
+    };
+
+    const res = {
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
+
+    await searchController.search(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(401);
+    expect(res.json).toHaveBeenCalledWith({ error: 'Unauthorized' });
+  });
+
+  it('should handle axios error and return 500 status', async () => {
+    const req = {
+      header: jest.fn().mockReturnValue(process.env.AUTH_TOKEN),
+      query: { q: 'laptop' },
+    };
+
+    const res = {
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
+
+    axios.get.mockRejectedValue(new Error('Axios error'));
+
+    await searchController.search(req, res);
+
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({ error: 'Internal Server Error' });
   });
 });
